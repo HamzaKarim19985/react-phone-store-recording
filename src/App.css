@@ -1,3 +1,45 @@
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+}
+
+body {
+  font-family: "Oswald", sans-serif !important;
+  background-color: var(--mainWhite) !important ;
+  color: var(--mainDark) !important;
+}
+.btn-black {
+  color: var(--mainDark);
+  background: transparent;
+  text-transform: capitalize;
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+.btn-black:hover {
+  cursor: pointer;
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+.cart-icon {
+  color: mainYellow;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.text-blue {
+  color: var(--mainBlue);
+}
+.text-bright {
+  color: var(--lightBlue);
+}
+.title-text {
+  font-family: fantasy;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
 .App {
   text-align: center;
 }
@@ -21,6 +63,11 @@
 
 .App-link {
   color: #61dafb;
+}
+.nav-link {
+  color: var(--mainWhite);
+  font-size: 1.3rem;
+  text-transform: capitalize !important;
 }
 
 @keyframes App-logo-spin {
