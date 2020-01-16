@@ -4,6 +4,9 @@ import logo from "../logo.svg";
 import "font-awesome/css/font-awesome.min.css";
 import styled from "styled-components";
 import { ButtonContainer } from "./Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserTie } from "@fortawesome/free-solid-svg-icons";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 export default class Navbar extends Component {
   render() {
@@ -19,7 +22,7 @@ export default class Navbar extends Component {
               aria-expanded="false"
               href="#"
             >
-              Profile
+              <FontAwesomeIcon icon={faUserTie} /> Profile
             </a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">
@@ -34,13 +37,12 @@ export default class Navbar extends Component {
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">
                 <Link to="/" class="ml-auto">
-                  Home
+                  <FontAwesomeIcon icon={faHome} /> Home
                 </Link>
               </a>
             </div>
           </li>
         </ul>
-
         <Link to="/Cart" class="ml-auto">
           <ButtonContainer>
             My Cart
@@ -57,4 +59,7 @@ const NavWrapper = styled.nav`
   background: var(--mainBlue);
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
 `;
