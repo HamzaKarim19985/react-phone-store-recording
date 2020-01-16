@@ -8,21 +8,39 @@ import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
   render() {
     return (
-      <NavWrapper class="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
-        {/*https://www.iconfinder.com/icons/1243689/call_phone_icon Creative 
-    Commons (Atribution 3.0 Unported);
-    https://www.iconfinder.com/Makoto_msk */}
-        <Link to="/">
-          <img src={logo} class="navbar_Brand" alt="Phone Icon" />
-        </Link>
-
-        <ul className="navbar-nav align-items-center">
-          <li class="nav-item">
-            <Link to="/" class="nav-link">
-              products
-            </Link>
+      <NavWrapper class="navbar navbar-expand-md bg-primary px-sm-5">
+        <ul className="nav nav-tabs">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#"
+            >
+              Profile
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">
+                <Link to="/forms">Sign in</Link>
+              </a>
+              <a class="dropdown-item" href="#">
+                <Link to="/forms">Sign Out</Link>
+              </a>
+              <a class="dropdown-item" href="#">
+                <Link to="/forms">Register</Link>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <Link to="/" class="ml-auto">
+                  Home
+                </Link>
+              </a>
+            </div>
           </li>
         </ul>
+
         <Link to="/Cart" class="ml-auto">
           <ButtonContainer>
             My Cart
@@ -37,4 +55,6 @@ export default class Navbar extends Component {
 }
 const NavWrapper = styled.nav`
   background: var(--mainBlue);
+  display: flex;
+  flex-direction: row;
 `;

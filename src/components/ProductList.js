@@ -1,18 +1,27 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title.js";
-import { ProductConsumer } from "../context.js";
+import { ProductConsumer, ProductContext } from "../context.js";
 
 export default class ProductList extends Component {
   state = {
-    products: []
+    products: [],
+    filteredArr: [],
+    query: ""
   };
+
   render() {
     return (
       <React.Fragment>
         <div class="py-5">
           <div class="container">
-            <Title name="Product" title="List" />
+            <div class="heading">
+              <h1 class="text-capitalize font-weight-bold ">
+                Mobile
+                <strong class="text-blue"> Clinic</strong>
+              </h1>
+            </div>
+
             <div class="row">
               <ProductConsumer>
                 {value => {
