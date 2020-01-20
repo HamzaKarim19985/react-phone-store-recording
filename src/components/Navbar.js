@@ -25,13 +25,13 @@ export default class Navbar extends Component {
               <FontAwesomeIcon icon={faUserTie} /> Profile
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="">
                 <Link to="/forms">Sign in</Link>
               </a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="">
                 <Link to="/forms">Sign Out</Link>
               </a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="">
                 <Link to="/forms">Register</Link>
               </a>
               <div class="dropdown-divider"></div>
